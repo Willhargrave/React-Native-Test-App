@@ -8,6 +8,9 @@ import { useRouter } from 'expo-router'
 
 import styles from './welcome.style'
 import { icons, SIZES } from '../../../constants'
+import { TouchableOpacity } from 'react-native-gesture-handler'
+
+const jobTypes = ["Full-time", "Part-time", "Contractor"]
 const Welcome = () => {
   const router = useRouter();
   return (
@@ -19,11 +22,30 @@ const Welcome = () => {
     <View style={styles.searchContainer}>
       <View style={styles.searchWrapper}>
         <TextInput 
-        style={styles.searchInput}/>
+        style={styles.searchInput}
+        value=""
+        onChange={() => {}}
+        placeholder="Search for jobs"
+        />
       </View>
+      <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+        <Image
+        source={icons.search}
+        resizeMode='contain'
+        style={styles.searchBtnImage}></Image>
+      </TouchableOpacity>
+    </View>
+    <View style={styles.tabsContainer}>
+      <Flatlist 
+      data={jobTypes}
+      renderItem={({item }) => (
+        <TouchableOpacity>
+          <Text>{item}</Text>
+        </TouchableOpacity>
+      )}/>
     </View>
     </View>
   )
 }
 
-export default Welcome
+export default Welcome;
