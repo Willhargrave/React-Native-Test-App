@@ -36,15 +36,22 @@ const Welcome = () => {
         style={styles.searchBtnImage}></Image>
       </TouchableOpacity>
     </View>
+
     <View style={styles.tabsContainer}>
       <Flatlist 
       data={jobTypes}
       renderItem={({item }) => (
         <TouchableOpacity
-        style={styles.tab(activeJobType, item)}>
+        style={styles.tab(activeJobType, item)}
+        onPress={() => {
+          setActiveJobType(item);
+          router.push(`/search/${item}`)
+        }}
+        >
           <Text>{item}</Text>
         </TouchableOpacity>
-      )}/>
+      )}
+      />
     </View>
     </View>
   )
