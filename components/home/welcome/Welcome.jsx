@@ -17,18 +17,19 @@ const Welcome = () => {
   return (
     <View>
       <View style={styles.container}>
-      <Text style={styles.userName}>Hello Will</Text>
-      <Text style={styles.welcomeMessage}>Find your perfect job</Text>
-    </View>
-    <View style={styles.searchContainer}>
-      <View style={styles.searchWrapper}>
-        <TextInput 
-        style={styles.searchInput}
-        value=""
-        onChange={() => {}}
-        placeholder="Search for jobs"
-        />
-      </View>
+        <Text style={styles.userName}>Hello Will</Text>
+        <Text style={styles.welcomeMessage}>Find Your Perfect Job</Text>
+        </View>
+      <View style={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
+          <TextInput
+          style={styles.searchInput}
+          value=""
+          onChange={() => {}} />
+          placeholder="Search for jobs"
+        </View>
+     
+
       <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
         <Image
         source={icons.search}
