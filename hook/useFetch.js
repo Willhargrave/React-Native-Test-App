@@ -41,3 +41,5 @@ useEffect(() => {
   }
   return { data, isLoading, error, refetch};
 }
+
+export default useFetch;
