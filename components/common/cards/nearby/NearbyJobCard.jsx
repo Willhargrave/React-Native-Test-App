@@ -7,12 +7,11 @@ import { checkImageURL } from '../../../../utils';
 const NearbyJobCard = ({job, handleNavigate}) => {
   return (
     <TouchableOpacity 
-    style={styles.container(selectedJob, item)}
-    onPress={() => handleCardPress(item)}>
-      <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
+    style={styles.container} onPress={handleNavigate}>
+      <TouchableOpacity style={styles.logoContainer}>
         <Image 
-        source={{uri: checkImageURL(item.employer_logo)
-        ? item.employer_logo :
+        source={{uri: checkImageURL(job.employer_logo)
+        ? job.employer_logo :
         'https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png'}}
         resizeMode='contain'
         style={styles.logoImage}/>
