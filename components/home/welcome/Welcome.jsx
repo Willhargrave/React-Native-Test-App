@@ -28,7 +28,7 @@ const Welcome = ({serchTerm, setSearchTerm, handleClick}) => {
           <TextInput
           style={styles.searchInput}
           value={serchTerm}
-          onChange={(text) => setSearchTerm(text)} 
+          onChangeText={(text) => setSearchTerm(text)} 
           placeholder="Search for jobs"
           />
         </View>
