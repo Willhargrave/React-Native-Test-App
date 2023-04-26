@@ -17,8 +17,18 @@ const Company = (companyLogo, jobTitle, companyName, location) => {
         style={styles.logoImage}
         />
       </View>
-      <View>
+      <View style={styles.jobTitleBox}>
         <Text style={styles.jobTitle}>{jobTitle}</Text>
+      </View>
+      <View style={styles.companyInfoBox}>
+        <Text styles={styles.companyName}>{companyName}</Text>
+        <View styles={styles.locationBox}>
+          <Image 
+          source={icons.location} 
+          style={styles.locationIcon} 
+          resizeMode='contain'/>
+          <Text style={styles.locationName}>{location}</Text>
+        </View>
       </View>
     </View>
   )
