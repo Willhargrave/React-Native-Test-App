@@ -31,6 +31,7 @@ const JobDetails = () => {
                 default:
                 break;
     }
+}
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
         <Stack.Screen
